@@ -1,23 +1,22 @@
 package com.delta.smallbaazaar.services;
 
 import com.delta.smallbaazaar.datastores.supplierRepo;
+import com.delta.smallbaazaar.datastores.userRepo;
 import com.delta.smallbaazaar.entities.Supplier;
+import com.delta.smallbaazaar.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class supplierService {
-
+public class userService {
     @Autowired
-    supplierRepo repo;
+    userRepo repo;
 
-
-    public void saveSupplier(Supplier sup) {
+    public void saveUser(Supplier sup) {
         repo.save(sup);
     }
 
-    public Supplier getSupplier(String userid, String password){
+    public Object getUser(String userid, String password) {
         return repo.findByUseridAndPassword(userid, password);
     }
-
 }

@@ -5,10 +5,11 @@ import javax.persistence.*;
 @Entity(name = "suppliers")
 public class Supplier {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    int id;
 
+    @Id
     @Column
     String userid;
 
@@ -23,8 +24,9 @@ public class Supplier {
 
     @Column
     String area;
-    public Supplier(int id, String userid, String password, String name, String gst, String area) {
-        this.id = id;
+
+    public Supplier( String userid, String password, String name, String gst, String area) {
+//        this.id = id;
         this.userid = userid;
         this.password = password;
         this.name = name;
@@ -51,13 +53,6 @@ public class Supplier {
         this.password = password;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

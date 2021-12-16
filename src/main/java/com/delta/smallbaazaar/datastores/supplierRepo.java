@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface supplierRepo extends JpaRepository<Supplier, Integer> {
     public Supplier save(Supplier supplier);
+    public Supplier findByUserid(String userid);
+    public Supplier findByUseridAndPassword(String userid, String password);
 }
