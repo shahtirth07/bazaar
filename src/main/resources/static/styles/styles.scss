@@ -1,0 +1,107 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: nunito, sans-serif;
+}
+
+input {
+    font-family:inherit;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.btn-add_product {
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    width: .5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+// every element starting with btn
+.btn-cta {
+    color: white;
+        background-color: #7f00ff;
+        border: none;
+        border-radius: .75rem;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            // light purple
+            background-color: purple;
+    }
+}
+
+
+.sup {
+
+
+    &__title{
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+}
+
+.form {
+    background-color: peachpuff;
+    padding: 2rem 5rem;
+    border-radius: .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &__subtitle {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+
+    &__group {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        & > * {
+            flex: 1;
+        }
+    }
+
+    &__product{
+        padding-block-end: 2rem;
+    }
+}

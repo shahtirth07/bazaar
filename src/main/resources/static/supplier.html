@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Small Bazaar - Register new Supplier</title>
+    <script src="js/sup.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="sup container">
+        <h1 class="sup__title">New Supplier Registration</h1>
+        <main class="sup__main">
+            <form id="form-new__sup" class="sup__form form" action="/register/supplier" method="post">
+                <div class="form__group">
+                    <label for="name" class="form__label">Name</label>
+                    <input id="name" type="text" placeholder="ABC suppliers">
+                </div>
+
+                <div class="form__group">
+                    <label for="gst" class="form__label">GSTIN</label>
+                    <input id="gst" type="text" placeholder="TDSK696878">
+                </div>
+
+                <div class="form__group">
+                    <label for="area" class="form__label">Area</label>
+                    <input id="area" type="text" placeholder="Mumbai">
+                </div>
+
+                <div class="form__products" id="">
+                    <div class="form__group">
+                        <h2 class="form__subtitle">add products</h2>
+                        <button class="btn-add_product" id="btn-add_product" type="button">+</button>
+                    </div>
+                    <div class="form__dynamic">
+                    </div>
+                </div>
+                <button class="btn-submit btn-cta" type="submit">submit</button>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>
