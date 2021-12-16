@@ -12,8 +12,8 @@ public class userService {
     @Autowired
     userRepo repo;
 
-    public void saveUser(Supplier sup) {
-        repo.save(sup);
+    public void saveUser(User user) {
+        repo.save(user);
     }
 
     public Object getUser(String userid, String password) {
