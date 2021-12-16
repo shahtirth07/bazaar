@@ -8,18 +8,22 @@ function createNewProduct() {
     let divName = document.createElement("div");
     let labelName = document.createElement("label");
     let inputName = document.createElement("input");
+    inputName.setAttribute("name", "name");
 
     let divType = document.createElement("div");
     let labelType = document.createElement("label");
     let inputType = document.createElement("input");
+    inputType.setAttribute("name", "type");
 
     let divPrice = document.createElement("div");
     let labelPrice = document.createElement("label");
     let inputPrice = document.createElement("input");
+    inputPrice.setAttribute("name", "price");
 
     let divQty = document.createElement("div");
     let labelQty = document.createElement("label");
     let inputQty = document.createElement("input");
+    inputQty.setAttribute("name", "qty");
 
 
     labelName.textContent = "add product";

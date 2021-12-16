@@ -8,18 +8,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collection;
-import java.util.Map;
-
 @RestController
-public class registerController {
-
+public class loginController {
     @Autowired
     supplierService service;
 
-    @PostMapping("/register/supplier")
-    public String registerSupplier(@ModelAttribute Supplier sup){
-        service.saveSupplier(sup);
+
+    @PostMapping("/login")
+    public String registerSupplier(@RequestParam String userid, String password, String type){
+//        todo check the type and call findMethod on respective service
         return "ok";
     }
 }

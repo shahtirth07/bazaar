@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Small Bazaar - Register new Supplier</title>
-    <script src="js/sup.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -15,27 +14,31 @@
             <form id="form-new__sup" class="sup__form form" action="/register/supplier" method="post">
                 <div class="form__group">
                     <label for="name" class="form__label">Name</label>
-                    <input id="name" type="text" placeholder="ABC suppliers">
+                    <input id="name" name="name" type="text" placeholder="ABC suppliers">
+                </div>
+
+
+                <div class="form__group">
+                    <label for="userid" class="form__label">Username</label>
+                    <input id="userid" name="userid" type="text" placeholder="create username">
+                </div>
+
+
+                <div class="form__group">
+                    <label for="password" class="form__label">Password</label>
+                    <input id="password" name="password" type="password">
                 </div>
 
                 <div class="form__group">
                     <label for="gst" class="form__label">GSTIN</label>
-                    <input id="gst" type="text" placeholder="TDSK696878">
+                    <input id="gst" type="text" name="gst" placeholder="TDSK696878">
                 </div>
 
                 <div class="form__group">
                     <label for="area" class="form__label">Area</label>
-                    <input id="area" type="text" placeholder="Mumbai">
+                    <input id="area" type="text" name="area" placeholder="Mumbai">
                 </div>
 
-                <div class="form__products" id="">
-                    <div class="form__group">
-                        <h2 class="form__subtitle">add products</h2>
-                        <button class="btn-add_product" id="btn-add_product" type="button">+</button>
-                    </div>
-                    <div class="form__dynamic">
-                    </div>
-                </div>
                 <button class="btn-submit btn-cta" type="submit">submit</button>
             </form>
         </main>
