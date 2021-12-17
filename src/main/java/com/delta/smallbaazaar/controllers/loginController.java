@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class loginController {
     @Autowired
     supplierService serviceS;
+
+    @Autowired
     userService serviceU;
 
     @PostMapping("/login")
@@ -29,7 +31,7 @@ public class loginController {
                 else return "Error invalid user";
 
             case "consumer":
-                User user = (User) serviceU.getUser(userid, password);
+                Object user = serviceU.saveUser(new User(userid, password));
                 if (user != null)
                     return "ok";
                 else return "Error invalid user";
