@@ -2,6 +2,7 @@ package com.delta.smallbaazaar.entities;
 
 import javax.persistence.*;
 
+//tirth
 @Entity(name = "suppliers")
 public class Supplier {
 
