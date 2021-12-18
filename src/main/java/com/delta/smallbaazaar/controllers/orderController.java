@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class orderController {
     @PostMapping("/order")
 
-    public String orderPlaced(@RequestParam Product product, Model model){
+    public String orderPlaced(@RequestParam String product, Model model){
         model.addAttribute("product",product);
         return "order.html";
     }
