@@ -1,5 +1,7 @@
 package com.delta.smallbaazaar.datastores;
 
+//By Hrucha Wankhade
+
 import com.delta.smallbaazaar.entities.Product;
 import com.delta.smallbaazaar.entities.Supplier;
 import org.springframework.data.jpa.repository.JpaRepository;
