@@ -5,12 +5,15 @@ import com.delta.smallbaazaar.entities.User;
 import com.delta.smallbaazaar.services.supplierService;
 import com.delta.smallbaazaar.services.userService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@Controller
 public class loginController {
     @Autowired
     supplierService serviceS;
@@ -19,23 +22,26 @@ public class loginController {
     userService serviceU;
 
     @PostMapping("/login")
-    public String registerSupplier(@RequestParam String userid, String password, String type){
-        System.out.println(userid+" : "+password);
-        System.out.println("im here");
+    public Object registerSupplier(@RequestParam String userid, @RequestParam String password, @RequestParam String type, Model model, HttpServletResponse res) throws IOException {
         if (userid == null|| password == null || type == null) return "please enter all the details";
         switch (type){
             case "supplier":
                 Supplier s = serviceS.getSupplier(userid, password);
                 if (s != null)
-                    return "ok";
-                else return "Error invalid user";
+                    return "product.html";
+                else {
+                    model.addAttribute("msg", "You are not a registered supplier");
+                    return "error.html";
+                }
 
             case "consumer":
-                Object user = serviceU.saveUser(new User(userid, password));
+                User user = serviceU.getUser(userid, password);
                 if (user != null)
-                    return "ok";
-                else return "Error invalid user";
-
+                    return user.getUserid();
+                else {
+                    model.addAttribute("msg", "Error invalid user");
+                    return "error.html";
+                }
             default:
                 throw new IllegalStateException("Unexpected value: " + type);
         }

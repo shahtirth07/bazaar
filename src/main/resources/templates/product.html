@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Small Bazaar - Add new product</title>
+    <script src="js/sup.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <main class="main">
+        <form action="/supplier/add" id="form-add_product" method="post" enctype="multipart/form-data">
+            <div class="form__group">
+                <label for="supplierid" class="form__label">
+                    supplier id
+                </label>
+                <input id="supplierid" name="supplierid" placeholder="username">
+            </div>
+            <div class="form__group">
+                <label for="name" class="form__label">
+                    product name
+                </label>
+                <input id="name" name="name" placeholder="eg. wheat">
+            </div>
+            <div class="form__group">
+                <label for="type" class="form__label">
+                    product type
+                </label>
+                <input id="type" name="type" placeholder="eg. cereal/dairy etc">
+            </div>
+            <div class="form__group">
+                <label for="quantity" class="form__label">
+                    product quantity
+                </label>
+                <input id="quantity" name="quantity" type="number" placeholder="eg. in kg">
+            </div>
+            <div class="form__group">
+                <label for="price" class="form__label">
+                    product price
+                </label>
+                <input id="price" name="price" type="number" placeholder="eg 100/kg">
+            </div>
+            <input type="submit" value="submit" id="btn-add_product">
+        </form>
+    </main>
+</body>
+
+</html>
