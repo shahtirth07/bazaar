@@ -6,9 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProductRepo extends JpaRepository<Product,String> {
+public interface productRepo extends JpaRepository<Product,String> {
     public Product save(Product product);
-    public Product findByProductidAndSupplierid(String productid,String supplierid);
-    public Product findByType(String type);
+    public Product findByProductid(String productid);
+    public Product findByProductType(String type);
 
 }
