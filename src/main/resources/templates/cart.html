@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Small Bazaar - Checkout</title>
+</head>
+<body>
+<main>
+    <form action="/order" method="post" th:each="obj:${product}">
+        <span th:text="${obj.productid}"></span>
+        <input name="tbd" value="1" type="number" min="0" max="10" placeholder="quantity">
+        <span th:text="${obj.price}" class=""></span>
+        <input type="submit" value="place order">
+    </form>
+</main>
+</body>
+</html>

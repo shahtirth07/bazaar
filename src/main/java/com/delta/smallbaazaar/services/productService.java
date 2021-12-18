@@ -17,6 +17,6 @@ public class productService {
         return repo.findByProductid(prod);
     }
     public Product getProduct(String type){
-        return repo.findByProductType(type);
+        return repo.findByType(type);
     }
 }

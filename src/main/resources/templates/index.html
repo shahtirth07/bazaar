@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>Small Bazaar - Home</title>
+</head>
+<body>
+<main>
+    <table class="table" >
+        <thead class="table__heading" >
+            <tr class="table__row" >
+                <td class="table__data--bold">Product name</td>
+                <td class="table__data--bold">Product type</td>
+                <td class="table__data--bold">Product quantity </td>
+                <td class="table__data--bold">Product price</td>
+            </tr>
+        </thead>
+        <tbody class="table__body">
+            <tr class="table__row" th:each="obj:${products}">
+                <td class="table__data">
+                    <a th:href="${'/product/' + {obj.type} +'/' + {obj.productid}}" th:text="${obj.productid}"> </a>
+                </td>
+                <td class="table__data" th:text="${obj.type}"></td>
+                <td class="table__data" th:text="${obj.quantity}"></td>
+<!--                <td><input name="tbd" placeholder="quantity" /> </td>-->
+                <td class="table__data" th:text="${obj.price}"></td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>
