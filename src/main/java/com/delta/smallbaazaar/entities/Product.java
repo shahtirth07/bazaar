@@ -3,7 +3,8 @@ package com.delta.smallbaazaar.entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-@Entity(name ="product")
+
+@Entity(name = "product")
 public class Product {
     @Id
     @Column
@@ -16,7 +17,18 @@ public class Product {
     int quantity;
 
     @Column
+    String type;
+
+    @Column
     float price;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public Product() {
     }
@@ -53,10 +65,11 @@ public class Product {
         this.price = price;
     }
 
-    public Product(String productid, String supplierid, int quantity, float price) {
+    public Product(String productid, String supplierid, int quantity, String type, float price) {
         this.productid = productid;
         this.supplierid = supplierid;
         this.quantity = quantity;
+        this.type = type;
         this.price = price;
     }
 }
