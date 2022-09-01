@@ -14,16 +14,16 @@ public class User {
     @Column
     String password;
 
-//    @Column
-//    String mobno;
+    @Column
+    String mobno;
 
     public User() {
     }
 
-    public User(String userid, String password) {
+    public User(String userid, String password, String mobno) {
         this.userid = userid;
         this.password = password;
-//        this.mobno = mobno;
+        this.mobno = mobno;
     }
 
     public String getUserid() {
